@@ -15,7 +15,7 @@ class EmployeeModel(models.Model):
     empname= models.CharField(max_length=20)
     Email= models.EmailField()
     salary= models.IntegerField()
-    company= models.ForeignKey(Company, on_delete=models.CASCADE,null=True)
+    company= models.ForeignKey(Company, related_name='employee', on_delete=models.CASCADE,null=True)
 
     class Meta:
         db_table="employeetable"

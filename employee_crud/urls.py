@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from serialcrud.views import Employeedetails,EmployeeView
-#from . import views
+# from serialcrud import views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('empdetails/', views.Employeedetails),
     path('empdetails/',Employeedetails.as_view()),
     path('empview/<int:pk>/',EmployeeView.as_view()),
 ]
